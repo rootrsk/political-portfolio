@@ -13,9 +13,11 @@ function Menu() {
             url: `${URL}/recipes`,
             method: 'GET'
         })
-        setStatus('')
-        setError('')
-        console.log(response)
+        if(response.data.status==='success'){
+            setRecipes(response.data.data.recipes)
+        } else{
+            getRecipes()
+        }
     }
     useEffect(() => {
         getRecipes()
@@ -27,17 +29,11 @@ function Menu() {
         <>
             <Header />
             <div className='menu'>
-                <Recipe />
-                <Recipe />
-                <Recipe />
-                <Recipe />
-                <Recipe />
-                <Recipe />
-                <Recipe />
-                <Recipe />
-                <Recipe />
-                <Recipe />
-                <Recipe />
+                {
+                    recipes.map((recipe)=>{
+                        return <Recipe {...recipe} key={recipe._id} />
+                    })
+                }
             </div>
         </>
         

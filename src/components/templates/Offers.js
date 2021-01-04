@@ -1,9 +1,11 @@
 import React from 'react'
 
-function Offers() {
+function Offer() {
     return (
         <div>
-            
+            <div className="offers">
+
+            </div>
         </div>
     )
 }
