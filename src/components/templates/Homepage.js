@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './Footer'
 import Header from './Header'
 import Recipe from './Recipe'
 
@@ -7,6 +8,7 @@ function Homepage() {
         <div>
             <Header />
             <Recipe />
+            <Footer />
         </div>
     )
 }

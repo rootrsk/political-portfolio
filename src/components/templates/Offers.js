@@ -1,11 +1,15 @@
 import React from 'react'
+import Footer from './Footer'
+import Header from './Header'
 
-function Offer() {
+function Offers() {
     return (
         <div>
+            <Header />
             <div className="offers">
 
             </div>
+            <Footer />
         </div>
     )
 }

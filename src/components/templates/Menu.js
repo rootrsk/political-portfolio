@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import Footer from './Footer'
 import Header from './Header'
 import Recipe from './Recipe'
 const URL = 'https://mahakaal-api.herokuapp.com'
@@ -21,10 +22,7 @@ function Menu() {
     }
     useEffect(() => {
         getRecipes()
-        return () => {
-
-        };
-    }, []);
+    });
     return (
         <>
             <Header />
@@ -35,6 +33,7 @@ function Menu() {
                     })
                 }
             </div>
+            <Footer />
         </>
         
     )
