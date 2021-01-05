@@ -1,7 +1,8 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { Link, NavLink } from 'react-router-dom'
 
-function Header() {
+function Header(props) {
     return (
         <div className='homepage_nav'>
             <div className="nav_logo">
@@ -18,11 +19,21 @@ function Header() {
                     <NavLink to='/offers' activeClassName='active-menu-item'>Offers</NavLink>
                 </li>
                 <li className="nav_menu-items">
-                    <NavLink to='/login' activeClassName='active-menu-item'>Login</NavLink>
+                    
+                    {props.user.isAuthenticated ? 
+                        <Link to='/user/cart' ><i style={{fontSize: '30px'}} class="fa fa-shopping-cart">
+                            {props.cart.length}</i>
+                        </Link>:
+                        <NavLink to='/login' activeClassName='active-menu-item'>Login</NavLink>} 
+                    
                 </li>
             </div>
         </div>
     )
 }
 
-export default Header
+const mapStateToProps = (state) =>{
+    return state
+}
+
+export default connect(mapStateToProps) (Header)

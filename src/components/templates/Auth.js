@@ -1,11 +1,43 @@
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-
-function Auth() {
+const URL = 'https://mahakaal-api.herokuapp.com/user/5ff1fde7b232e102d89b8e85'
+function Auth(props) {
     const [username,setUsername] = useState('')
     const [email,setEmail] = useState('')
     const [contact,setContact] = useState('')
     const [password,setPassword] = useState('')
+    const [open,setOpen] = useState(true)
+    const openHadler = (status) =>{
+        setOpen(status)
+    }
+    const loginHandler = async() =>{
+        console.log('Logging in...')
+        const response = await axios({
+            url:URL,
+            method: 'GET'
+        })
+        props.dispatch({
+            type:'SET_USER',
+            user:{
+                isAuthenticated: true,
+                _id: response.data._id,
+                username:response.data.name,
+                email: response.data.email,
+                contact: response.data.contact
+            }
+        })
+        if(props.open){
+            props.open(false)
+        }
+        
+        props.dispatch({
+            type:'SET_CART',
+            cart: response.data.cart
+        })
+        console.log(response.data)
+    }
     useEffect(()=>{
         const signup = document.getElementById('signup');
         const login = document.getElementById('login')
@@ -24,8 +56,17 @@ function Auth() {
     },[])
     return (
         <div>
+            
+            
             <div className="form_div">
-                
+                {
+                props.open && 
+                <button className='' 
+                    onClick={()=>props.open(false)}
+                    style={{position:'absolute',padding:'10px',background:'transparent',color:'white'}}>
+                    Close
+                </button>
+            }
                 <div className="auth_form-header">
                     <button className='p-btn round' id='signup'>SignUp</button>
                     <button className='p-btn round' id='login'>Login</button>
@@ -89,12 +130,18 @@ function Auth() {
                             onChange={(e)=>setPassword(e.target.value)}
                         />
                         <Link to=''>Forget Password ?</Link>
-                        <button className='p-btn round glow'>Login</button>
+                        <button className='p-btn round glow' onClick={loginHandler}>Login</button>
                     </div>
+                    
                 </div>
+                
             </div>
+            
         </div>
     )
 }
+const mapStateToProps = (state) =>{
+    return state
+}
 
-export default Auth
+export default connect(mapStateToProps)(Auth) 

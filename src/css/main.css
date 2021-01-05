@@ -70,7 +70,7 @@ button{
 }
 .recipe-template:hover {
     box-shadow: -1px 3px 10px #a8a8a8;
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 }
 .recipe-img{ 
 }

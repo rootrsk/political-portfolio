@@ -4,6 +4,7 @@ import Auth from './components/templates/Auth';
 import Homepage from './components/templates/Homepage';
 import Menu from './components/templates/Menu';
 import Offers from './components/templates/Offers';
+import store from './store/store'
 import './css/main.css'
 
 function App() {
