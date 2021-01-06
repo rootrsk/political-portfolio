@@ -6,6 +6,9 @@ import Menu from './components/templates/Menu';
 import Offers from './components/templates/Offers';
 import store from './store/store'
 import './css/main.css'
+import UserRouter from './components/user/UserRouter';
+import EmployRouter from './components/employ/EmployRouter';
+import AdminRouter from './components/admin/AdminRouter'
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
           <Route path='/menu' component={Menu}  />
           <Route path='/login' component={Auth} />
           <Route path='/offers' component={Offers} />
+          <Route path='/user' component ={UserRouter} />
+          <Route path='/employ' component ={EmployRouter} />
+          <Route path='/admin' component ={AdminRouter} />
         </Switch>
       </BrowserRouter>
     </div>

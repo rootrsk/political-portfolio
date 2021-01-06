@@ -21,8 +21,13 @@ function Header(props) {
                 <li className="nav_menu-items">
                     
                     {props.user.isAuthenticated ? 
-                        <Link to='/user/cart' ><i style={{fontSize: '30px'}} class="fa fa-shopping-cart">
-                            {props.cart.length}</i>
+                        <Link to='/user/cart' >
+                            
+                            <a href="#" class="notification">
+                                <i style={{fontSize: '30px'}} class="fa fa-shopping-cart"></i>
+                                <span class="badge">{props.cart.length}</span>
+                            </a>
+                        
                         </Link>:
                         <NavLink to='/login' activeClassName='active-menu-item'>Login</NavLink>} 
                     

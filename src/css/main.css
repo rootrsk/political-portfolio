@@ -277,3 +277,85 @@ button{
     text-align: center;
     color: #fbfbfb;
 }
+.cart_recipe-template{
+    background: #2f4858;
+    width: 300px;
+    margin: 10px auto;
+    /* padding: 10px 0px; */
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cart_recipe-template p{
+
+}
+.cart_recipe_template-img{
+    width: 300px;
+    height: 150px;
+    border-radius: 2px;
+}
+.cart_recipe_template-img img{
+    width:  100%;
+    height: 100%;
+    border-radius: 2px;
+}
+.cart_recipe_template-details {
+    background: #fbfbfb;
+    background: var(--primary_color);
+    width: calc(100%-100px);
+    /* width: 200px; */
+    /* background: cover; */
+    width: 100%;
+    color: white;
+    position: relative;
+    bottom: 0px;
+    padding: 10px;
+}
+.cart_recipe_template-details-text {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 3px 10px; */
+    color: white;
+    /* font-size: 20px; */
+    font-weight: 700;
+}
+.quantity_controller{
+    font-size: 16px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+.quantity_controller div{
+    /* margin: 5px; */
+}
+.quantity_controller button{
+    font-size: 20px;
+    margin: 0px 2px;
+    color: rgb(255, 255, 255);
+    background: transparent;
+}
+.notification {
+    /* background-color: #555; */
+    color: white;
+    text-decoration: none;
+    /* padding: 15px 26px; */
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+}
+.notification:hover {
+    /* background: red; */
+}
+
+.notification .badge {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    padding: 1px 6px;
+    border-radius: 50%;
+    background-color:#00afa7;
+    color: rgb(253, 251, 253);
+    font-size: 16px;
+}
