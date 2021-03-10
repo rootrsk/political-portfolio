@@ -1,361 +1,350 @@
-@import url(https://fonts.googleapis.com/css?family=Balthazar:regular);
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&display=swap');
-:root{
-    --primary_color: #00dc9e;
-    --dark_match:#2f4858;
-    --vl:50px;
-    --l: 40px;
-    --l:30px;
-    --m:25px;
-    --s:20px;
-    --vs:15px;
-}
 *{
-    padding: 0px;
     margin: 0px;
-    font-family: Balthazar;
-    font-family: 'Noto Sans JP', sans-serif;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-li{
-    list-style-type: none;
+body{
+    background-image: linear-gradient(to right bottom, #51ff5f, #53ed4c, #54db38, #52ca22, #50b900);
+    background-image: linear-gradient(to bottom, #102512, #00221e, #001e25, #051825, #14101e);
+    background-image: linear-gradient(to bottom, #000000, #000000, #000000, #000000, #000000);
+    background-image: linear-gradient(to bottom, #2a2a2a, #2b2a2b, #2c2b2b, #2d2b2b, #2e2b2b);
+    min-height: 200vh;
 }
-a{
-    text-decoration: none;
-}
-button{
-    border: none;
-    outline: none;
-}
-.homepage_nav {
-    display: flex;
-    justify-content: space-between;
-    box-shadow: -1px 3px 6px #c9c7c7;
-    color: var(--primary_color);
-    padding: 10px;
-    
-}
-.nav_log{
-
-}
-.nav_logo h1{
-
-}
-.nav_menus{
-    display: flex;
-    
-    
-}
-.nav_menu-items{
-    padding: 10px;
-    color: inherit;
-}
-.nav_menu-items a {
-    color: inherit;
-    font-size: var(--s);
-}
-.nav_menu-items a:visited {
-    color: inherit;
-}
-.active-menu-item{
-    border-bottom: 4px solid var(--primary_color);
-    border-radius: 3px;
-}
-.recipe-template {
-    width: 350px;
-    /* height: 550px; */
-    box-shadow: -1px 3px 6px #e4dfdf;
-    margin: 10px;
-    transition: transform 1s, box-shadow 1s;
-    height: 390px;
-}
-.recipe-template:hover {
-    box-shadow: -1px 3px 10px #a8a8a8;
-    /* transform: scale(1.1); */
-}
-.recipe-img{ 
-}
-.recipe-img img{
+.intro_div{
     width: 100%;
-    height: 190px;
-    background: var(--primary_color);
-}
-.recipe_details{
-    text-align: center;
-}
-.recipe_details-row1 {
+    height: 600px;  
+    /* background: white; */
+    /* background: url('http://welcomeqatar.com/wp-content/uploads/2015/03/Political-Leaders-who-were-Assassinated.jpg'); */
+    background-position: center;
+    background: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
-    justify-content: space-between;
+    place-items: center;
+    position: relative;
+    border-bottom: 30px solid rgba(37, 32, 32, 0.856);
+    /* opacity: 0.5; */
 }
-.recipe_details-row1 li{
-    margin: 5px;
-    padding: 5px 10px;
-    background: var(--primary_color);
-    font-weight: 700;
-    box-shadow: 1px 3px 6px #e4e2e2;
-    color: #ffffff;
-    font-size: var(--vs);
-}
-.p-btn{
-    margin: 5px;
-    padding: 10px 20px;
-    color: white;
-    background: var(--primary_color);
-    outline: none;
-    border: none;
-    color: white;
-    font-weight: 700;
-    font-size: var(--vs);  
-    transition: box-shadow 1s;  
-    cursor: pointer;
-    
-}
-.recipe_details-row2{
-    color: var(--dark_match);
-    padding: 10px;
-    margin: 10px 0px;
-}
-.recipe_details-row3{
-    display: flex;
-    justify-content: space-between;
-    overflow: auto;
 
-}
-.bold{
+.text-wrapper{
     font-weight: 700;
-}
-.t1{
-    font-size: 30px;
-}
-.t2{
-    font-size: 25px;
-}
-.menu{
+    background: rgb(0, 0, 0);
+    height: 100%;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    place-items: center;
     justify-content: space-around;
-    min-height: 90vh;
-
 }
-
-
-/* Auth Page */
-.form_div{
-    width: 500px;
-    height: 800px;
-    margin: 50px auto;
-    background: #00dc9e;
-    background-image: linear-gradient(to left top, #00bfa6, #00b9a6, #00b4a6, #00aea5, #00a8a4, #00a0a1, #00999e, #00919a, #038693, #0c7a8b, #156f83, #1b6479);
-    border-radius: 10px;
-    /* margin-top: 20px; */
+.text-wrapper img{
+    width: 400px;
+    height: 100%;
+    position: relative;
+    background: cover;
+    opacity: .8;
+}
+.intro_text{
+    position: relative;
+    justify-content: center;
+    max-width: 700px;
+    font-size: 50px;
+    color: white;
     
 }
-.form_container{
+.members{
     display: flex;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 50px;
+}
+.member{
+    width: 350px;
+    height: 400px;
+    background: rgba(88, 88, 88, 0.877);
+    border-radius: 5px;
+    margin: 10px;
+    /* box-shadow: -2px 3px 16px 1px rgba(169, 129, 129, 0.62); */
     position: relative;
     overflow: hidden;
 }
-.signup_form{
-    width: 100%;
-    margin: auto;
-    display: grid;
-    place-items: center;
-    border-radius: 7px;
-    margin-left: -500px;
-    margin-right: 0px;
+.img{
+    display: flex;
+    justify-content: center;
+}
+.img img{
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+    margin-top: 10px;
+    box-shadow: -2px 3px 16px 1px rgba(169, 129, 129, 0.62);
     position: relative;
-    transition: margin-left 1.5s , margin-right 1.5s;
-    /* transition:  margin-right 2s; */
+    transition: width 500ms, height 500ms, border-radius 500ms, margin-top 500ms;
+    filter: brightness(.8);
+}
+.img img:hover {
+    width: 100%;
+    border-radius: 1%;
+    height: 100%;
+    position: absolute;
+    margin-top: 0px;
+    box-shadow: -2px 3px 16px 1px rgba(59, 47, 47, 0.62);
 
 }
-.glowing_btn{
-    transform: translateY(0);
-    box-shadow: inset 0 0 0px whitesmoke,
-    inset 20px 0 80px rgb(20, 212, 238),
-    /* inset -20px 0 80px rgb(136, 255, 0), */
-    /* inset 20px 0 300px rgb(24, 248, 110), */
-    /* inset -20px 0 300px rgb(64, 245, 245), */
-    /* 0 0 50px #fff, */
-    /* -10px 0 80px rgb(17, 243, 48), */
-    10px 0 50px rgb(56, 205, 219);
+.text{
+    margin: 20px;
+    text-align: justify;
+    font-size: 20px;
 }
-.glow{
-    border: none;
+.our_mottos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 100px;
 }
-.glow:hover{
-    transform: translateY(0);
-    box-shadow: inset 0 0 60px rgb(98, 228, 228),
-    /* inset 20px 0 80px rgb(0, 255, 128),
-    inset -20px 0 80px rgb(136, 255, 0),
-    inset 20px 0 300px rgb(24, 248, 110), */
-    /* inset -20px 0 300px rgb(64, 245, 245), */
-    0 0 50px #fff,
-    -10px 0 80px rgb(17, 243, 48),
-    10px 0 80px rgb(126, 231, 231);
+.motto{
+    width: 30%;
+    /* background: whitesmoke; */
+    height: 400px;
+    margin: 20px 10px;
+    border-radius: 20px;
+    border: 1px solid rgb(27, 236, 184);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+
 }
-.form_container:hover{
+.motto img{
+    width: 100px;
+    height: 100px;
+}
+.motto .text{
+    color: rgb(173, 181, 182);
+    text-align: center;
+    letter-spacing: 1px;
     
 }
-.xxx{
-    margin-left: 0px;
-    margin-right: -1500px;
+.text_header{
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0px;
+    color: rgb(233, 233, 233);
+    letter-spacing: 1px;
 }
-.auth_form:nth-child(1){
-    color: green;
-    font-size: 700px;
+.get_in_touch-form{
+    width: 90%;
+    background: rgba(48, 45, 47, 0.103);
+    background: #3f3d3d;
+    padding: 20px 0px;
+    /* border: 1px solid rgba(80, 77, 77, 0.849) ; */
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 1px 3px 13px -2px rgba(29, 27, 27, 0.62);
+
 }
-.login_form{
+.form{
+    width: 700px;
+    margin: auto;
+}
+.get_in_touch-form input{
+    padding: 18px 20px;
+    display: block;
     width: 100%;
+    margin: 40px 0px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    background: #cacaca;
+}
+.get_in_touch-form button {
+    padding: 10px 20px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    box-shadow: 1px 3px 13px -2px rgb(26, 16, 16);
+    transition: box-shadow 700ms;
+}
+.get_in_touch-form button:hover {
+    padding: 10px 20px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    box-shadow: 1px 3px 13px -2px rgb(255, 255, 255);
+    box-shadow: 1px 7px 7px  rgba(255, 255, 255, 0.62);
+    box-shadow: 1px 3px 10px 2px rgba(255, 255, 255, 0.62);
+    box-shadow: 0 0 20px #ffffff;
+}
+.from-header{
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+.btn-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.social_medias{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 100px;
+}
+.social_media{
+    /* display: grid; */
+    background: #3f3d3d;
+    box-sizing: border-box;
+    width: 300px;
+    /* margin: auto; */
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    height: 350px;
+    box-shadow: none;
+    transition: transform 300ms, box-shadow 500ms;
+}
+.social_media:hover {
+    transform: scale(1.1);
+    box-shadow: -3px -3px 1px rgba(54, 119, 238, 0.719),
+     3px 3px 2px  rgba(187, 47, 192, 0.719);
+}
+.social_media img{
+    width: 150px;
+    display: block;
+}
+.social_media a{
+    text-decoration: none;
+    width: 100px;
+    background: #ffffff;
+    padding: 10px 20px;
+    margin: 30px 0px;
+    display: block;
+    border-radius: 3px;
+    transition: transform 200ms ,box-shadow 500ms;
+}
+.social_media a:hover {
+    
+    transform: scale(1.2);
+    box-shadow: 0 0 20px #ffffff;
+}
+.gallery{
+    width: 90%;
     margin: auto;
     margin-top: 100px;
-    display: grid;
-    place-items: center;
-    border-radius: 7px;
-    
-}
-.auth-input::placeholder {
-    color: white;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-.auth-input{
-    background: #00a0a2;
-    width: 80%;
-    display: block;
-    padding: 15px 0px;
-    text-align: center;
-    margin: 30px 0px;
-    border-radius: 5px;
-    outline: none;
-    box-shadow: 1px 3px 6px #2d3333;
-    border: none;
-    color: white;
-    font-size: var(--s);
-}
-.round{
-    border-radius: 30px;
-    padding: 15px 40px;
-    font-weight: 700;
-    font-size: var(--s);
-    margin: 50px 0px;
-}
-.auth_form-header{
-    width: 80%;
-    display: flex;
-    margin: auto;
-    justify-content: space-between;
+    filter: invert(.2);
+    /* border-radius: 10px; */
+    position: relative;
+    overflow: hidden;
 }
 .footer{
-    width: 100%;
-    background: #00bfa6;
-    background-image: linear-gradient(to right top, #00dc9e, #00d1a4, #00c6a7, #00bba8, #00afa7, #00a5a4, #009b9f, #00919a, #038693, #0c7a8b, #156f83, #1b6479);
-    height: 300px;
-    color: black;
-}
-.footer_container{
-    
-    max-width: 1500px;
-    width: 80%;
-    margin: auto;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 40px 0px;
+    justify-content: flex-start;
+    background: #333232;
+    margin-top: 100px;
+    padding: 20px 0px;
 }
-.footer_container_box-header h1{
-    color: black;
-    letter-spacing: 2px;
-    
+.footer img{
+    filter: invert(.4);
 }
-.footer_container_box-list li{
-    font-size: var(--s);
-}
-.copyright{
-    font-size: var(--s);
-    font-weight: 400;
-    text-align: center;
-    color: #fbfbfb;
-}
-.cart_recipe-template{
-    background: #2f4858;
-    width: 300px;
-    margin: 10px auto;
-    /* padding: 10px 0px; */
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-}
-.cart_recipe-template p{
-
-}
-.cart_recipe_template-img{
-    width: 300px;
-    height: 150px;
-    border-radius: 2px;
-}
-.cart_recipe_template-img img{
-    width:  100%;
-    height: 100%;
-    border-radius: 2px;
-}
-.cart_recipe_template-details {
-    background: #fbfbfb;
-    background: var(--primary_color);
-    width: calc(100%-100px);
-    /* width: 200px; */
-    /* background: cover; */
-    width: 100%;
-    color: white;
-    position: relative;
-    bottom: 0px;
-    padding: 10px;
-}
-.cart_recipe_template-details-text {
-    display: flex;
-    justify-content: space-between;
-    /* padding: 3px 10px; */
-    color: white;
-    /* font-size: 20px; */
+.footer_details span{
+    display: block;
+    font-size: 23px;
     font-weight: 700;
+    color: rgb(153, 153, 153);
+    margin: 20px;
+
 }
-.quantity_controller{
-    font-size: 16px;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 10px;
+.developer_details{
+    display: grid;
+    justify-content: flex-start;
+    margin: 10px 20px;
 }
-.quantity_controller div{
-    /* margin: 5px; */
+.developer_details i,span{
+    color: rgb(189, 184, 184);
+    font-size: 25px;
+    margin: 10px;
 }
-.quantity_controller button{
-    font-size: 20px;
-    margin: 0px 2px;
-    color: rgb(255, 255, 255);
-    background: transparent;
+.developer_details h1,h2{
+    color: #e7e6e6;
 }
-.notification {
-    /* background-color: #555; */
-    color: white;
-    text-decoration: none;
-    /* padding: 15px 26px; */
-    position: relative;
-    display: inline-block;
-    border-radius: 2px;
-}
-.notification:hover {
-    /* background: red; */
+@media only screen and (max-width: 600px) {
+    .intro_div{
+        height: 400px;
+    }
+    .text-wrapper {
+        justify-content: flex-start;
+    }
+    .intro_text{
+        font-size: 25px;
+        max-width: 200px;
+        width: 100%;
+    }
+    .text-wrapper img {
+        width: 200px;
+        height: 100%;
+        position: relative;
+        background: cover;
+        opacity: .8;
+    }
+    .members{
+        flex-wrap: wrap;
+    }
+    .get_in_touch-form{
+
+    }
+    .member{
+        margin-top: 50px;
+    }
+    .form{
+        width: 90%;
+        position: relative;
+        font-size: 20px;
+    }
+    .from-header{
+        font-size: 25px;
+    }
+    .motto{
+        width: 330px;
+    }
+    .social_medias{
+        flex-wrap: wrap;
+    }
+    .social_media{
+        margin-top: 30px;
+    }
+    .footer{
+        flex-wrap: wrap;display: grid;
+        place-items: center;
+        width: 100%;
+        overflow: hidden;
+        padding: 0px;
+        margin: 0px;
+
+    }
+
 }
 
-.notification .badge {
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    padding: 1px 6px;
-    border-radius: 50%;
-    background-color:#00afa7;
-    color: rgb(253, 251, 253);
-    font-size: 16px;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
 }
